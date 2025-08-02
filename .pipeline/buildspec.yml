@@ -20,6 +20,6 @@ phases:
       - echo Pushing the Docker image...
       - docker push 280924795846.dkr.ecr.us-east-2.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '[{"name":"apipi","imageUri":"%s"}]' 280924795846.dkr.ecr.us-east-2.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > task-ecs.json
+      - printf '[{"name":"mypod","imageUri":"%s"}]' 280924795846.dkr.ecr.us-east-2.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > task-ecs.json
 artifacts:
     files: task-ecs.json
